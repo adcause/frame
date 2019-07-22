@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <title>New Tab</title>
+
+    <style>
+        
+        body {
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+
+        #time {
+            margin-top: 18%;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 1000%;
+            letter-spacing: -5px;
+        }
+
+        #quote {
+            text-align: center;
+            font-size: 337.5%;
+            color: white;
+        }
+
+        #cause {
+            position: relative;
+        }
+
+        #cause1 {
+            border-color: red;
+            border-style: solid;
+            border-width: thin;
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        #cause2 {
+            border-color: red;
+            border-style: solid;
+            border-width: thin;
+            width: 728px;
+            height: 90px;
+            position: absolute;
+            bottom: 0;
+            right: 310px;
+        }
+
+        /* #cause3 {
+            border-color: red;
+            border-style: solid;
+            border-width: thin;
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            bottom: 0;
+            right: 1048px;
+        } */
+    </style>
+
+    <!-- Adsense -->
+    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-2768748312607400",
+            enable_page_level_ads: true
+        });
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140456673-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-140456673-1');
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="time"></div>
+        <div id="quote">Be kind.</div>
+        <div id="cause1"></div>
+        <div id="cause2"></div>
+        <div id="cause3"></div>
+
+    </div>
+
+    <!-- Background image -->
+    <script>
+        var randNum = Math.floor(Math.random() * 7) + 1;
+        var imageUrl = "./image/" + randNum + ".jpg";
+        document.body.style.backgroundImage = "url('" + imageUrl + "')";
+    </script>
+
+    <!-- Set initial time and update -->
+    <script>
+        var time = new Date();
+        document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+
+        function updateTime() {
+            var time = new Date();
+            document.gtetElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        }
+        setInterval(updateTime, 1000);
+    </script>
+    
+    <!-- Update quotes -->
+</body>
+
+<footer>
+</footer>
+
+</html>
