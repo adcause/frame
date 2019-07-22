@@ -110,7 +110,7 @@
 
         function updateTime() {
             var time = new Date();
-            document.gtetElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+            document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
         }
         setInterval(updateTime, 1000);
     </script>
