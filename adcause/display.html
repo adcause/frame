@@ -4,7 +4,6 @@
     <title>New Tab</title>
 
     <style>
-        
         body {
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -34,9 +33,6 @@
         }
 
         #cause1 {
-            border-color: red;
-            border-style: solid;
-            border-width: thin;
             width: 300px;
             height: 250px;
             position: absolute;
@@ -45,9 +41,6 @@
         }
 
         #cause2 {
-            border-color: red;
-            border-style: solid;
-            border-width: thin;
             width: 728px;
             height: 90px;
             position: absolute;
@@ -55,26 +48,49 @@
             right: 310px;
         }
 
-        /* #cause3 {
-            border-color: red;
-            border-style: solid;
-            border-width: thin;
-            width: 300px;
-            height: 250px;
+        #ppterm {
+            color: grey;
             position: absolute;
             bottom: 0;
-            right: 1048px;
-        } */
-    </style>
+            left: 1%;
+            font-size: 90%;
+        }
 
-    <!-- Adsense -->
-    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        #ppterm a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none;
+            color: grey
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="time"></div>
+        <div id="quote">Be kind.</div>
+        <div id="cause1">
+            <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px"
+                data-ad-client="ca-pub-2768748312607400" data-ad-slot="2994744178"></ins>
+        </div>
+        <div id="cause2">
+            <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+                data-ad-client="ca-pub-2768748312607400" data-ad-slot="5141507313"></ins>
+        </div>
+        <div id="cause3"></div>
+        <div id="ppterm">
+            <a href="https://adcause.io/privacy" target="_blank">Privacy Policy</a> |
+            <a href="https://adcause.io/term" target="_blank">Terms of Service</a>
+        </div>
+    </div>
+
+    <!-- Background image -->
     <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-2768748312607400",
-            enable_page_level_ads: true
-        });
-    </script> -->
+        var randNum = Math.floor(Math.random() * 7) + 1;
+        var imageUrl = "./image/" + randNum + ".jpg";
+        document.body.style.backgroundImage = "url('" + imageUrl + "')";
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140456673-2"></script>
@@ -84,23 +100,12 @@
         gtag('js', new Date());
         gtag('config', 'UA-140456673-1');
     </script>
-</head>
 
-<body>
-    <div id="main">
-        <div id="time"></div>
-        <div id="quote">Be kind.</div>
-        <div id="cause1"></div>
-        <div id="cause2"></div>
-        <div id="cause3"></div>
-
-    </div>
-
-    <!-- Background image -->
+    <!-- Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
-        var randNum = Math.floor(Math.random() * 7) + 1;
-        var imageUrl = "./image/" + randNum + ".jpg";
-        document.body.style.backgroundImage = "url('" + imageUrl + "')";
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
     <!-- Set initial time and update -->
@@ -114,7 +119,7 @@
         }
         setInterval(updateTime, 1000);
     </script>
-    
+
     <!-- Update quotes -->
 </body>
 
