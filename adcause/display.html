@@ -120,7 +120,32 @@
         setInterval(updateTime, 1000);
     </script>
 
-    <!-- Update quotes -->
+    <!-- Update quotes/mantra -->
+    <script>
+        const qm_arr = [
+            "Sometimes later becomes never. Do it now.",
+            "Do something today that your future self will thank you for.",
+            "Be grateful.",
+            "Do what you can, then do the best you can.",
+            "Thank someone today.",
+            "This, too, shall pass.",
+            "Be thankful.",
+            "You are worthy.",
+            "You are unstoppable.",
+            "Comparison is the thief of joy.",
+            "You are awesome.",
+            "You are beautiful.",
+            "Be easy on yourself.",
+            "Have something good to say.",
+            "Don't wish it was easier, wish you were better.",
+            "Don't just get through the day, get from the day.",
+            "Hold yourself accountable.",
+            "Try something new today."
+        ]
+
+        document.getElementById("quote").innerHTML = qm_arr[Math.floor(Math.random() * (qm_arr.length))];
+
+    </script>
 </body>
 
 <footer>
