@@ -13,6 +13,15 @@
             position: relative;
         }
 
+        #adblockmsg {
+            padding: 0.2% 1% 0.2% 1%;
+            background-color: rgba(174, 145, 93, 0.9);
+            border-radius: 4px;
+            text-align: center;
+            margin: auto;
+            display: none;
+        }
+
         #time {
             margin-top: 18%;
             width: 100%;
@@ -68,6 +77,10 @@
 
 <body>
     <div id="main">
+        <div id="adblockmsg">
+            It seems like you have enabled an adblocker. Please whitelist <b>edricteo.com</b> to start seeing
+            advertisements. Thank you!
+        </div>
         <div id="time"></div>
         <div id="quote">Be kind.</div>
         <div id="cause1">
@@ -78,7 +91,6 @@
             <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
                 data-ad-client="ca-pub-2768748312607400" data-ad-slot="5141507313"></ins>
         </div>
-        <div id="cause3"></div>
         <div id="ppterm">
             <a href="https://adcause.io/privacy" target="_blank">Privacy Policy</a> |
             <a href="https://adcause.io/term" target="_blank">Terms of Service</a>
@@ -144,7 +156,36 @@
         ]
 
         document.getElementById("quote").innerHTML = qm_arr[Math.floor(Math.random() * (qm_arr.length))];
+    </script>
 
+    <!-- Check for adblocker -->
+    <script>
+        document.addEventListener('DOMContentLoaded', init, false);
+        function init() {
+            adsBlocked(function (blocked) {
+                if (blocked) {
+                    document.getElementById("adblockmsg").style.display = "table";
+                }
+            })
+        }
+        function adsBlocked(callback) {
+            var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
+
+            var myInit = {
+                method: 'HEAD',
+                mode: 'no-cors'
+            };
+
+            var myRequest = new Request(testURL, myInit);
+
+            fetch(myRequest).then(function (response) {
+                return response;
+            }).then(function (response) {
+                callback(false)
+            }).catch(function (e) {
+                callback(true)
+            });
+        }
     </script>
 </body>
 
