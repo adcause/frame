@@ -27,13 +27,13 @@
             width: 100%;
             text-align: center;
             color: white;
-            font-size: 1000%;
+            font-size: 950%;
             letter-spacing: -5px;
         }
 
         #quote {
             text-align: center;
-            font-size: 337.5%;
+            font-size: 200%;
             color: white;
         }
 
@@ -98,10 +98,21 @@
     </div>
 
     <!-- Background image -->
+    <script src="./modernizr-custom.js"></script>
     <script>
         var randNum = Math.floor(Math.random() * 6) + 1;
-        var imageUrl = "./image/" + randNum + "-min.jpg";
-        document.body.style.backgroundImage = "url('" + imageUrl + "')";
+        Modernizr.on('webp', function (result) {
+            if (result) {
+                // Has WebP support
+                var imageUrl = "./image/" + randNum + ".webp";
+                document.body.style.backgroundImage = "url('" + imageUrl + "')";
+            }
+            else {
+                // No WebP support
+                var imageUrl = "./image/" + randNum + "-min.jpg";
+                document.body.style.backgroundImage = "url('" + imageUrl + "')";
+            }
+        });
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
