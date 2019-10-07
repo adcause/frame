@@ -102,33 +102,17 @@
     <script>
         var randNum = Math.floor(Math.random() * 6) + 1;
         Modernizr.on('webp', function (result) {
+            var imageUrl;
             if (result) {
                 // Has WebP support
-                var imageUrl = "./image/" + randNum + ".webp";
-                document.body.style.backgroundImage = "url('" + imageUrl + "')";
+                imageUrl = "./image/" + randNum + ".webp";
             }
             else {
                 // No WebP support
-                var imageUrl = "./image/" + randNum + "-min.jpg";
-                document.body.style.backgroundImage = "url('" + imageUrl + "')";
+                imageUrl = "./image/" + randNum + "-min.jpg";
             }
+            document.body.style.backgroundImage = "url('" + imageUrl + "')";
         });
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140456673-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-140456673-1');
-    </script>
-
-    <!-- Adsense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 
     <!-- Set initial time and update -->
@@ -168,6 +152,17 @@
 
         document.getElementById("quote").innerHTML = qm_arr[Math.floor(Math.random() * (qm_arr.length))];
     </script>
+</body>
+
+<footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140456673-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-140456673-1');
+    </script>
 
     <!-- Check for adblocker -->
     <script>
@@ -198,9 +193,16 @@
             });
         }
     </script>
-</body>
 
-<footer>
+    <!-- Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        window.onload = function () {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        };
+    </script>
+
 </footer>
 
 </html>
