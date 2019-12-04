@@ -164,14 +164,10 @@
             })
         }
         function adsBlocked(callback) {
-            var testURL = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'
-
-            var myInit = {
+            var myRequest = new Request('https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js', {
                 method: 'HEAD',
                 mode: 'no-cors'
-            };
-
-            var myRequest = new Request(testURL, myInit);
+            });
 
             fetch(myRequest).then(function (response) {
                 return response;
