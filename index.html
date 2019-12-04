@@ -83,7 +83,7 @@
             localStorage.setItem("image_counter", String(image_counter));
             localStorage.setItem("image_counter_prev_date", String(date.getDate()));
         }
-    </script>    
+    </script>
 </head>
 
 <body>
@@ -115,14 +115,11 @@
 
     <!-- Set initial time and update -->
     <script>
-        var time = new Date();
-        document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
-
-        function updateTime() {
-            var time = new Date();
-            document.getElementById('time').innerHTML = time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
-        }
-        setInterval(updateTime, 1000);
+        document.getElementById('time').innerHTML = date.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        setInterval(function () {
+            var current_time = new Date();
+            document.getElementById('time').innerHTML = current_time.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true });
+        }, 1000);
     </script>
 
     <!-- Update quotes/mantra -->
