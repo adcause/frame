@@ -60,10 +60,10 @@
 
         #cfooter {
             color: grey;
-            position: absolute;
-            bottom: 0;
+            position: fixed;
+            bottom: 1%;
             left: 1%;
-            font-size: 90%;
+            font-size: 85%;
         }
 
         #cfooter a:link,
@@ -72,6 +72,21 @@
         a:active {
             text-decoration: none;
             color: grey
+        }
+
+        #donation {
+            color: grey;
+            position: fixed;
+            top: 1%;
+            right: 1%;
+        }
+
+        #fb-page-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 100;
         }
 
         #update-overlay {
@@ -86,14 +101,6 @@
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 2;
             cursor: pointer;
-        }
-
-        #fb-page-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 100;
         }
     </style>
     <script>
@@ -114,6 +121,7 @@
             It seems like you have enabled an adblocker. Please whitelist <b>serve.edricteo.com</b> to start seeing
             advertisements. Thank you!
         </div>
+        <div id="donation">$59.20</div>
         <div id="time"></div>
         <div id="quote"></div>
         <div id="cause1">
