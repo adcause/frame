@@ -60,10 +60,12 @@
         }
 
         #cfooter {
+            border-radius: 5px;
             bottom: 1%;
             color: grey;
             font-size: 85%;
             left: 1%;
+            padding: 0 5 0 5;
             position: fixed;
         }
 
@@ -75,12 +77,18 @@
             text-decoration: none;
         }
 
+        .div-shade {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
         #top-right {
-            color: grey;
+            border-radius: 5px;
+            color: white;
             position: fixed;
             text-align: right;
             top: 1%;
             right: 1%;
+            padding: 0 5 0 5;
         }
 
         #fb-page-overlay {
@@ -123,7 +131,7 @@
             It seems like you have enabled an adblocker. Please whitelist <b>serve.edricteo.com</b> to start seeing
             advertisements. Thank you!
         </div>
-        <div id="top-right">
+        <div id="top-right" class="div-shade">
             <div id="donation">$59.20</div>
             <div id="tab-count"></div>
         </div>
@@ -140,12 +148,13 @@
             </div>
         </div>
         <div id="update-overlay" onclick="toggleUpdateOverlayOff()">
+            <div style="color:white; text-align: center; padding-top: 5px;">Click to dismiss</div>
             <div id="fb-page-overlay">
                 <iframe id="fb-page-iframe" width="500" height="650" style="border:none;overflow:hidden" scrolling="no"
                     frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-        <div id="cfooter">
+        <div id="cfooter" class="div-shade">
             <a href="https://adcause.io/privacy" target="_blank">Privacy Policy</a> |
             <a href="https://adcause.io/term" target="_blank">Terms of Service</a> |
             <span onclick="toggleUpdateOverlayOn()" style="cursor: pointer;">Updates</span>
