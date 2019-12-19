@@ -10,4 +10,4 @@ jobs:
     - name: curl
       uses: wei/curl@v1.1.1
       with:
-        args: -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE }}/purge_cache" -H "X-Auth-Email:\ ${{ secrets.CF_EMAIL }}" -H "Authorization:\ Bearer ${{ secrets.CF_API_KEY }}" -H "Content-Type:\ application/json" --data '{"files":["https://serve.edricteo.com"]}'
+        args: -X POST 'https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE }}/purge_cache' -H 'X-Auth-Email: ${{ secrets.CF_EMAIL }}' -H 'Authorization: Bearer ${{ secrets.CF_API_KEY }}' -H 'Content-Type: application/json' --data '{"files":["https://serve.edricteo.com"]}'
