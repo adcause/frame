@@ -118,7 +118,7 @@
         var image_counter_prev_date = Number(localStorage.getItem("image_counter_prev_date"));
         var date = new Date();
         if (image_counter == 0 || (image_counter_prev_date != date.getDate())) {
-            image_counter = (Math.floor(Math.random() * 6) + 1);
+            image_counter = (Math.floor(Math.random() * 11) + 1);
             localStorage.setItem("image_counter", String(image_counter));
             localStorage.setItem("image_counter_prev_date", String(date.getDate()));
         }
