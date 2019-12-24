@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: curl
+      uses: wei/curl@v1.1.1
+      with:
+        args: -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE }}/purge_cache" -H "X-Auth-Email&#58; ${{ secrets.CF_EMAIL }}" -H "Authorization&#58; Bearer ${{ secrets.CF_API_KEY }}" -H "Content-Type&#58; application/json" --data '{"files":["https://serve.edricteo.com"]}'
